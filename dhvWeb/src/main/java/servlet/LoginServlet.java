@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet{
                 response.sendRedirect(url);
             } else {
                 request.setAttribute("error","Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập hoặc mật khẩu.");
-                response.sendRedirect(request.getContextPath() + "/showStudent.jsp");
+                request.getRequestDispatcher(request.getContextPath() + "/index.jsp").forward(request,response);
             }
 
         } catch (ClassNotFoundException | SQLException e) {
