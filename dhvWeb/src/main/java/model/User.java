@@ -1,11 +1,13 @@
-public class user{
+package model;
+
+public class User{
     private String name;
     private String password;
 
-    public user(){
+    public User(){
     }
 
-    public user(String name, String password){
+    public User(String name, String password){
         this.name = name;
         this.password = password;
     }

@@ -10,14 +10,21 @@
         <div class = "container">
             <form method="post" action = "login">
                 <h1>Login Account</h1>
+                    <% String error = (String) request.getAttribute("error");
+                        if(error != null){ %>
+                        <p style="color:red"><%= error%> </p> 
+                    <%
+                      }
+                    %>
                     <div class = "form-group">
+                        
                         <label for = "username">Username</label>
                         <input type = "text" name = "name" placeholder = "Enter Username" required>
                     </div>
 
                     <div class = "form-group">
                         <label for = "password">Password</label>
-                        <input type = "text" name = "password" placeholder = "Enter Password" required>                    
+                        <input type = "password" name = "password" placeholder = "Enter Password" required>                    
                     </div>
 
                     <div class = "button_holder">
