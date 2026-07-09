@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JSP Page</title>
+        <title>Student Management</title>
         <meta charset="UTF-8">
         <style>
             .col-sm-4{
@@ -94,12 +94,15 @@
     </head>
 <%
 
+    request.setCharacterEncoding("UTF-8");
     if(request.getParameter("submit")!=null)
     {
+
         String name = request.getParameter("sname");
+
+        System.out.println(name);
         String course = request.getParameter("course");
         int fee = Integer.parseInt(request.getParameter("fee"));
-
         java.sql.Connection con = null;
         java.sql.PreparedStatement pst = null;
 
@@ -140,7 +143,7 @@
                 java.sql.PreparedStatement pst = null;
                 java.sql.ResultSet rs;
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/school","root","123");
+                con = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/school?useUnicode=true&characterEncoding=UTF-8","root","123");
                 String query = "SELECT * from records";
                 java.sql.Statement st = con.createStatement();
                 rs = st.executeQuery(query);
@@ -156,8 +159,6 @@
                 </tr>
         <%
                 }
-
-
         %>
                 </thead>
             </table>

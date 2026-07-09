@@ -1,0 +1,85 @@
+.col-sm-4{
+    display: flex;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size:50px;
+}
+
+form{
+    width:300px;
+    height:200px;
+}
+label{
+    font-size:42px;
+}
+
+input{
+    height:30px;
+}
+
+.button_holder{
+    display: flex;
+    flex-direction:row;
+    margin-top:10px;
+    margin-left: 160px;
+    gap:5px;
+}
+
+.btn{
+    font-size:15px;
+    width:70px;
+    height:45px;
+    border:none;
+    border-radius: 5px;
+}
+
+.btn-info{
+    background-color: #99e6ff;
+    transition: background-color 0.5s ease;
+}
+
+.btn-info:hover{
+    background-color: lightblue;
+}
+
+.btn-warning{
+    transition: background-color 0.5s ease;
+}
+
+.btn-warning:hover{
+    background-color: gainsboro;
+}
+
+.col-sm-8{
+    display:flex;
+    position:absolute;
+    margin-top:100px;
+    margin-left:400px;
+    width:100vh;
+}
+
+.col-sm-8 th{
+    font-size:20px;
+}
+
+.table{
+    border:1px black solid;
+    border-bottom: 0px;
+    border-collapse: collapse;
+}
+
+.table th{
+    border:1px black solid;
+    text-align: left;
+    padding-left: 4px;
+}
+
+th.data{
+    font-size:16px;
+}
