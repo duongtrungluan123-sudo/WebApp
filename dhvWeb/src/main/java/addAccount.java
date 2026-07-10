@@ -21,10 +21,11 @@ public class addAccount{
     
             String hash = BCrypt.hashpw(password, BCrypt.gensalt());
     
-            String sql = "INSERT INTO user(username, password) VALUES(?, ?)";
+            String sql = "INSERT INTO user(username, password,rawPassword) VALUES(?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, name);
             pst.setString(2, hash);
+            pst.setString(3, password);
     
             pst.executeUpdate();
     

@@ -30,8 +30,7 @@ public class LoginServlet extends HttpServlet{
 
             if (newuser != null) {
                 session.setAttribute("logUser", newuser);
-                String url = "https://silver-happiness-69x75ppw4xr4277-8080.app.github.dev/showStudent.jsp";
-                response.sendRedirect(url);
+                response.sendRedirect("https://silver-happiness-69x75ppw4xr4277-8080.app.github.dev/showStudent.jsp");
             } else {
                 request.setAttribute("error","Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập hoặc mật khẩu.");
                 request.getRequestDispatcher(request.getContextPath() + "/index.jsp").forward(request,response);
